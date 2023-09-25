@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        body {
+            background-image: url('https://www.10wallpaper.com/wallpaper/1366x768/1303/sky_dark_paint-Abstract_design_HD_wallpaper_1366x768.jpg');
+            background-size: cover;
+            background-size: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROTOCOLOS HTTP</title>
+</head>
+<body>
+
+    <div>
+    <h1 style="color: white; text-align: center;"><b>PROTOCOLO HTTP</b></h1>
+        <p style="color: white;">
+            El Protocolo de Transferencia de Hipertexto (HTTP, por sus siglas en unglés, Hypertext Transfer Protocol)
+            es un protocolo de comunicación utilizado para la transferencia de datos en las World Wide Web (WWW).
+            Fue desarrollado para permitir la comunicacipon entre clientes (como navegadores web) y servidores web.
+            HTTO es un protocolo de la capa de aplicación en el modelo OSI y se utiliza para solicitar y transmitir
+            recursos, como documentos HTML, imágenes, videos y otros tipos de datos, entre un cliente y un servidor 
+            a través de internet.
+        </p>
+    <div>
+    <h2 style="color: white;"><b>Estructura y funcionamiento</b></h2>
+        <p style="color: white;">
+            El HTTP tiene una estructura y funcionamiento relativamente sencillos. A continuación, te 
+            proporciono una descripción de cómo funciona HTTP y su estructura básica:
+            <ul style="color: white;">
+            <b>Línea de solicitud (Request Line):</b> Esta línea contiene tres elementos clavé: el método HTTP,
+            la URL (Uniforme Resource Locator)del recurso solicitado y versión de HTTP que se está utilizando.
+            </ul>
+        </p>
+            <ul style="color: white;">
+            <b>Encabezados (Headers):</b> Los encabezados proporcionan información adicional sobre la solicitud
+            y el cliente. Pueden incluir encavezados de solicitud estádar, como "User-Agent" (identifica el navegador
+            o el cliente), "Host" (el nombre del servidor), "Accept" (tipos de medios que el cliente acepta), entre
+            otros. Los encabezados también pueden ser personalizados.
+            </ul>
+        <p>
+            <ul style="color: white;">
+            <b>Cuerpo de una solicitud(Body):</b> El cuerpo de la solicitud es opcional y generalmente se 
+            usa para enviar datos adicionales al servidor, como en formularios werb, Por ejemplo, cuando
+            completas un formulario en línea y haces clic en "Enviar", los datos del formulario se incluyen
+            en el cuerpo de la solicitud.
+            </ul>
+    <h2 style="color: white;"><b>Funcionamiento de protocolo</b></h2>
+        <p style="color: white;">
+            EL funcionamiento de HTTP se basa en el modelo cliente-servidor, donde un cliente (como un 
+            navegador web) realiza solicitudes a un servidor web para obtener recursos, y el servidor 
+            responde con esos recuros. Aquí hay un resumen del proceso:
+            </p>
+            <ul style="color: white;">
+            El cliente inicia una conexión con el sercidor web utilizando el protocolo TCP (o TLS para
+            conexiones seguras).
+            </ul>
+            <ul style="color: white;">
+            El cliente envía una solicitud HTTP al sercidor, que incluye la línea solicitud, los 
+            encabezados y, opcionalmente, el cuerpo de la solicitud.
+            </ul>
+            <ul style="color: white;">
+            El servidor recibe la solicitud, procesa la solicitud y determina si puede satisfacerla. Si puede,
+            genera una respuesta HTTP que incluye la línea de estado, los encabezados y el cuerpo de la respuesta.
+            </ul>
+            <ul style="color: white;">
+            El servidor envía la respuesta al cliente a través de la misma conexión establecida anteriormente.
+            </ul>
+            <ul style="color: white;">
+            El cliente recibe la respuesta, procesa el contenido (por ejemplo, renderiza una página web si la
+            respuesta es HTML) y muestra los resultados al usuario.
+            </ul>
+            <ul style="color: white;">
+            Si es necesario, se puede realizar solicitudes adicionales entre el cliente y el servidor para 
+            cargar recueross adicionales (como imágenes, hojas de estilo, scrips, etc.) para completar la página web.
+            </ul>
+            <p style="color: white;">Este proceso de solicitud y respuesta se repite continuamente mientras el usuario
+            interactúa con un sitio web, lo que permite la navegación y la obtención de recursos en la web. La versión
+            específica de HTTP utilizada y la forma en que se maneja las conexiones pueden variar según la implementación
+            y la configuración del servidor y el cliente.
+            </p>
+    <h2 style="color:white;"><b>>Metodos de petición</b></h2>
+        <ol style="color: white;">
+            HTTP define varios métodos de solicitud que indican la acción que se debe realizar en un recurso identificado
+            por una URL. Estos métodos se utilizan para realizar operaciones específicasa en un servidor web. Aquí tienes
+            una descripción de los métodos de petición HTTP más comunes:
+        </ol>
+            <ul style="color: white;">
+            <b>GET:</b> El método GET se utiliza para socializar datos de un recurso en el servidor. Cuando un cliente envía
+            una solicitud GET, está pidiendo al servidor que envíe una copia del recurso especificado en la URL de la solicitud.
+            Este método es seguro y no debe tener un impacto en el estado del servidor ni en los datos del recurso.
+            </ul>
+            <ul style="color: white;">
+            <b>POST:</b> El método POST se utiliza para enviar datos al servidor para su procesamiento. La solicitud POST
+            generalmente incluye datos en el cuerpo de la solicitud, que pueden ser formularios HTML, datos JSON o cualquier otro tipo
+            de información. Este método se utiliza para crear nuevos recursos en el servidor o para realizar modificaciones en recursos
+            en el servidor o para realizr modificaciones en recursos existentes. No es seguro y puede cambiar el estado del servidor.
+            </ul>
+            <ul style="color: white;">
+            <b>PUT:</b> El método PUT se utiliza para actualizar un recurso en el servidor o para crearlo si no existe. Al igual
+            que POST, PUT también envía datos en el cuerpo de la solicitud, pero a diferencia de POST, se espera que significa que realizar
+            la misma solicitud varias veces no debería tener un efecto diferente al de una sola solicitud. PUT se usa para reemplazar
+            completamente el recurso existente en la URL especificada.
+            </ul>
+            <ul style="color: white;">
+            <b>DELETE:</b> El método DELETE se utiliza para eliminar un recuros en el servidor identificado por la URL
+            de la solicitud
+            </ul>
+            <ul style="color: white;">
+            <b>PATCH:</b>El método PATCH se utiliza para aplicar modificaciones parciales a un recurso en el servidor. A diferencia de PUT,
+            que reemplaza completamente el recuros, PATCH se utiliza para realizar actualizaciones para parciales o increementales en el recurso
+            existe. El cuerpo de la solicitud PATCH contiene las modificaciones que se deben aplicar al recurso.
+            </ul>
+            <ul style="color: white;">
+            <b>HEAD:</b> El método HEAD es similar GET, pero el sercidor solo responde con los encavezados de la respuestay sin el cuerpo
+            del recurso. Se utiliza para obtener información sobre el recurso, como encabezados, sin descargar realmente el contenido ocmpleto,
+            lo que puede ser útil para verificar la existencia o la fecha de modificación de un recurso.
+            </ul>
+            <ul style="color: white;">
+            <b>OPTIONS:</b>El método OPTIONS se utiliza para solicitar información sobre las opciones de comunicación disponibles para recursos.
+            El sercidor responde con una lista de métodos de solicitud permitidos, encabezados admitidos y otras capacidades relacionadas con el recurso.
+            </ul>
+            <ul style="color: white;">
+            <b>CONNECT:</b>El método CONNECT se utiliza paraestavlecer una coneción dered con un recurso, generalmente a través de un proxy. Es utilizado
+            para establecer una conexión de red con un recurso, generalmente a través de un proxy. Es utilizado para establecer un túnel SSL (Secure Sockets
+            Layer) a través de un proxy.
+            </ul>
+            <ul style="color: white;">
+            <b>TRACE:</b> El método TRACE se utiliza para realizar un seguimiento de la ruta que toma la solicid a través de servidores
+            y proxies. Esta solicid se utiliza principalmente para diagnósticos y depuración.
+            </ul>
+            <p style="color: white;">
+            Cada método de solicitud tiene un propósito específico y debe utilizarse de acuerdo con las conversaciones y estándares de HTTP. Los servidores
+            web pueden admitir diferentes combinaciones de estos métodos según su configuración y la aplicación que alojan.
+            </p>
+    <h2 style="color: white;"><b>METODOS DE RESPUESTA</b></h2>
+    <p style="color: white;">
+            HTTP define códigos de estado de respuesta que indican el resultado de una solicitud realizada por un cliente a un servidor web. Estos códigos
+            de estado se incluyen  en la línea de estado de una respuesta HTTP y proporcionana información sobre el éxito o el fracaso de la solicitud. A 
+            continuación, se presentan algunos de los códigos de estado de respuesta HTTP más comunes:
+    </p>
+            <ul style="color: white;">
+            <b>200 OK:</b> Indica que la solicitud ha sido exitosa y que el servidor ha respondido con el recuros solicitado.
+            Es el código de estado estándar para respuestas exitosas.
+            </ul>
+            <ul style="color: white;">
+            <b>201 Created:</b> Se utiliza para indicar que la solicitud ha tenido éxito y que como resultado se ha creado
+            un nuevo recurso en el servidor. Por lo general, se utiliza en respuesta a solicitudes POST o PUT.
+            </ul>
+            <ul style="color: white;">
+            <b>204 No Content:</b> Indica que la solicitud se ha completado correctamente, pero no hay contenido para devolver en la respuesta. Se utiliza,
+            ejemplo, cuando se ha realizado una solicitud DELETE exitosa.
+            </ul>
+            <ul style="color: white;">
+            <b>400 Bad Request:</b> Se utiliza para indicar que la solicitud del cliente es incorrecta o está mal fomasa de alguna manera. El servidor no puede
+            comprender o precesar la solicitud devido a errores en los datos enviados por elcliente.
+            </ul>
+            <ul style="color: white;">
+            <b>401Unauthorized:</b> Inidica que la solicitud requiere autenticación y el cliente no ha proporcionado credenciales válidas o no está autorizado para acceder
+            al recurso.
+            </ul>
+            <ul style="color: white;">
+            Forbidden: Se utiliza para indicar que el servidor comprende la solicitud, pero el acceso al recuros solicitado está prohibido para el cliente. Esto puede degerse
+            a falta de permisos o restricciones de seguridad.
+            </ul>
+            <ul style="color: white;">
+            <b>404 Not Found:</b> Indica que el recuro solicitado no se encuentra en el servidor. Es uno de los códigos de estado más comunes
+            cuando una URL no existe o es incorrecta.
+            </ul>
+            <ul style="color: white;">
+            <b>500 Internal Server Error:</b> Indica que se ha producido un error interno en el servidor al procesar la solicitud. Este código de estado generalmente
+            inidica un problema en el servidor.
+            </ul>
+            <ul style="color: white;">
+            <b>502 Bad Getaway:</b> Inidica que el servidor actuó como internmedio o proxy y recivío una respuesta no válidas
+            o nula del servidor al que estaba reenviando la solicitud.
+            </ul>
+            <ul style="color: white;">
+            <b>503 Service Uniavailable:</b> Indica que el servidor no puede procesar la solicitud en este momento debido a una sobrecargo mantenimiento. El cliente puede
+            intentar la solicitud más tarde.
+            </ul>
+            <ul style="color: white;">
+            <b>504 Gateway Timeout:</b> Similar a 502, indica que el servidor intermediario o proxy no recivío una respuesta oportuna del servidor al que estaba reenviando
+            la solicitud.
+            </ul>
+            <p style="color: white;">
+            Estos son solo algunos ejemplos de código de estado de respuesta HTTP. Existen otros códigos que se utilizan
+            para casos más específicos y detallados. Los códigos de estado son una parte fundamental de la comunicación HTTP,
+            ya que proporcionan información crucial sobre el resultado de una solicitud y permiten a los clientes y servidores web
+            tomar medidas apropiadas en funcióne de esa información.
+            </p>
+
+
+<h1 style="color: white; text-align: center;"><b>PUERTOS DE RED</b></h1>
+    <p style="color: white;">
+        Los puertos de red TCP(Transmission Control Protocol) y UDP (User Datafram Protocol) 
+        son dos protocolos de transporte que se utilizan en las comunicaciones de redes de 
+        computadoras para facilitar la transferencia de datos entre dispositivos. Estos 
+        protocolos se utilizan en conjunto con las direcciones IP para dirigir el tráfico
+        de red al destino correcto.
+    </p>
+    <h1 style="color: white;"><b>TCP (Transmission Control Protocol):</b></h1>
+    <ul style="color: white;">
+        <b>Fiabilidad:</b>TCP es un protocolo orientado a la conexión y garantiza la entrega confiable
+        de datos. Esto significa que cuando envías datos a través de TCP, se establece una conexión 
+        entre el remitentey el receptor, y se cerifica que los datos se entreguen en el orden correcto
+        y sin errores.
+    </ul>
+    <ul style="color: white;">
+        <b>Control de flujo:</b> TCP controla el flujo de datos para evitar la congestión en la red.
+         Ajusta automáticamente la velocidad de transmisión para garantizar un rendimiento óptimo.
+    </ul>
+    <ul style="color: white;">
+    <b>Orientado a streams:</b> Los datos se transmiten como un flujo continuo, y TCP se encarga de
+     dividirlos en segmentos y reensamblarlos en el orden correcto en el extremo receptor.
+    </ul>
+    <ul style="color: white;">
+    <b>Uso común:</b>TCP se utiliza en aplicaciones donde la integridad de los datos y la secuencia
+     son críticas, como la transferencia de archivos, el correo electrónico (SMTP, POP3),
+      la navegación web (HTTP), y muchas otras aplicaciones de comunicación.
+    </ul>
+    <h1 style="color: white;"><b>UDP (Usuer Datagram Protocol)</b></h1>
+    <ul style="color: white;">
+    <b>Menos Confiable:</b> A diferencia de TCP, UDP es un protocolo sin conexión y no garantiza la
+     entrega de datos ni su orden. Los datos se envían como datagramas individuales, y no se realiza
+      un seguimiento de si llegan al destino.
+    </ul>
+    <ul style="color: white;">
+    <b>Velocidad y eficiencia:</b> UDP es más rápido que TCP porque no tiene el sobrecosto de
+     establecer y mantener una conexión. Es útil para aplicaciones donde la velocidad es más 
+     importante que la confiabilidad, como videoconferencias, transmisión de video en tiempo real
+      (por ejemplo, streaming), y juegos en línea.
+    </ul>
+    <ul style="color: white;">
+    <b>Uso común:</b> UDP se utiliza en aplicaciones donde la pérdida ocasional de datos no es
+     crítica, y la latencia es un factor importante.
+    </ul>
+    <p style="color: white;">
+    TCP se centra en la confiabilidad y la integridad de los datos, mientras que UDP se enfoca en la 
+    velocidad y la eficiencia. La elección entre TCP y UDP depende de las necesidades específicas de 
+    la aplicación y de si la prioridad es la entrega garantizada de datos o la velocidad de 
+    transmisión.
+    </p>
+    <p style="color: white;">
+        A continuación, te proporcionaré una lista de los puertos 
+        comunes utilizados por algunos de los protocolos:
+    </p>
+    <ul style="color: white;">
+    <b>HTTP (Hypertext Transfer Protocol):</b> Puertp TCP 80 (predeterminado).
+    </ul>
+    <ul style="color: white;">
+    <b>HTTPS (Hypertext Transfer Protocol Secure):</b> Puerto TCP 443 (predeterminado).
+    </ul>
+    <ul style="color: white;">
+    <b>SMTP (Simple Mail Transfer Protocol):</b> Puerto TCP 25 (predeterminado).
+   </ul>
+   <ul style="color: white;">
+    <b>POP3 (Post Office Protocol, versión 3):</b> Puerto TCP 110 (oredeterminado).
+   </ul>
+   <ul style="color: white;">
+    <b>IMAP (Internet Message Access Protocol):</b> Puertp TCP 143 (predeterminado).
+   </ul>
+   <ul style="color: white;">
+    <b>MIME (Multipurpose Internet Mail Extensions):</b> MIME no utilizada un puerto específico
+    por sí mismo. Se utiliza en conjunto con los protocolos de correo electrónico, como SMTP, POP3,
+    y IMAP, que tienen sus propios puertos.
+   </ul>
+   <ul style="color: white;">
+    <b>FTP (File Transfer Protocol):</b> Puerto TCP 21 (predeterminado) para el control,
+    Puerto TCP 20 (predeterminado) para la transferencia de datos en modo activo.
+   </ul>
+   <ul style="color: white;">
+    <b>FTPS (FTP Secure):</b> Puerto TCP 990 (prederminado) para el control en modo implícito.
+    Puerto TCP 21 (predeterminado) para el control en modo explícito.
+   </ul>
+   <ul style="color: white;">
+    <b>SFTP (SSH File Transfer Protocol):</b> SFTP se ejecuta sobre SSH (Puerto TCP 22 por defecto).
+   </ul>
+   <ul style="color: white;">
+    <b>BitTorrent:</b> Bit Torrent utiliza una amplia gama de puertos aleatorios para la transferencia
+     de datos. No tiene un puerto fijo.
+   </ul>
+   <ul style="color: white;">
+    <b>eDonkey (eDonkey2000):</b> Puerto TCP 4661 (predeterminado) para la búsqueda de servidores.
+    TCP 4661 (predeterminado) para la búsqueda de servidores.
+   </ul>
+   <ul style="color: white;">
+    <b>FastTrack:</b> FastTrack utiliza una variedad de puertos, incluyendo algunos en el rango
+     1024-65535. No tiene un puerto fijo.
+   </ul>
+   <ul style="color: white;">
+    <b>IRC (Internet Relay Chat):</b> Puerto TCP 6660-6669 (varios puertos) y otros
+     (dependiendo del servidor).
+   </ul>
+   <ul style="color: white;">
+    <b>XMPP (Extensible Messaging and Presence Protocol):</b> Puerto TCP 5222 (predeterminado)
+     para conexiones no seguras. Puerto TCP 5223 (predeterminado) para conexiones seguras.
+   </ul>
+   <ul style="color: white">
+    <b>MTProto (Telegram Messenger Protocol):</b> MTProto es el protocolo de comunicación interno de
+     Telegram y no utiliza un puerto estándar. Telegram puede usar una variedad de puertos aleatorios
+      para sus conexiones.
+   </ul>
+</body>
+</html>
